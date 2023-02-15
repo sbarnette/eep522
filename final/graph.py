@@ -85,7 +85,6 @@ def connect_graph(G):
             # For each node in the graph, compare vs. all nodes in the giant-list. The
             # difference x,y must be 1:1 (diagonal), then find the shortest + link.
             g_ix = (g0, g1)
-            print(g_ix)
             for n1 in g1.nodes:
                 for n0 in g0.nodes:
                     d = euclidean_distance_45deg(n1, n0)

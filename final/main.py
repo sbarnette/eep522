@@ -49,16 +49,20 @@ def main():
         ##time.sleep(1)
 
         # Setup the camera interface.
-        ##camera.prepare()
+        camera.prepare()
+        print("Camera ready")
         ##status_ready()
         
         # Wait for shutter, then take picture.
-        ##shutter.wait_for_press()
+        shutter.wait_for_press()
+        print("Shutter pressed")
         ##status_processing()
-        ##image = camera.take_photo()
+        image = camera.take_photo()
+        print("Photo taken")
         #image.save("raw-photo-%s.jpg" % (int(time.time())))
-        print("loop entered")
-        image = camera.process_image("circle.jpg")
+        ##print("loop entered")
+        ##image = camera.process_image("circle.jpg")
+        image = camera.process_image(image)
         #image.save("processed-photo-%s.jpg" % (int(time.time())))
         print("Image processed")
 

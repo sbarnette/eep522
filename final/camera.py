@@ -112,10 +112,10 @@ def process_image(image, shader=False):
     Process input image to a simple as possible line-drawing.
     """
     #read from file for testing. remove this line when camera is working
-    newimage = Image.open(image)
+    #newimage = Image.open(image)
 
     # Handle the resizing ourselves.
-    croppedimage = crop_and_resize(newimage)
+    croppedimage = crop_and_resize(image)
     contrasted = ImageOps.autocontrast(croppedimage)
     edges = find_edges(contrasted)
     
