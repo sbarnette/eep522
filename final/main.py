@@ -59,11 +59,11 @@ def main():
         ##status_processing()
         image = camera.take_photo()
         print("Photo taken")
-        #image.save("raw-photo-%s.jpg" % (int(time.time())))
+        image.save("raw-photo-%s.jpg" % (int(time.time())))
         ##print("loop entered")
         ##image = camera.process_image("circle.jpg")
         image = camera.process_image(image)
-        #image.save("processed-photo-%s.jpg" % (int(time.time())))
+        image.save("processed-photo-%s.jpg" % (int(time.time())))
         print("Image processed")
 
         # Process the image & generate plotter moves.
